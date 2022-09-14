@@ -167,6 +167,7 @@ button {
   margin-bottom: 30px;
 }
 
+
 #modal-background {
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -188,5 +189,19 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .card {
+    width: 20%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    grid-row-gap: 20px;
+    
+  
   }
 }
