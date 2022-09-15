@@ -212,7 +212,7 @@ button {
 }
 
 
-@media only screen and (min-width: 701px) and (max-width: 1280px) {
+@media only screen and (min-width: 701px) and (max-width: 2000px) {
   /* For big display: */
   .card {
     flex-direction: row;
@@ -224,7 +224,5 @@ button {
     margin: 50px ;
   
   }
-  #blog-btn{
-    margin-left: 29%;
-  }
+
 }
