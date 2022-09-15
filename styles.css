@@ -209,7 +209,7 @@ button {
 }
 
 
-@media only screen and (min-width: 701px)  {
+@media only screen and (min-width: 701px) and (max-width: 1800px) {
   /* For big display: */
   .card {
     flex-direction: row;
