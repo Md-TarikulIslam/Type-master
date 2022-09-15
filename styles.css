@@ -182,6 +182,21 @@ button {
   top: 0;
 }
 
+#blog-btn{
+  text-decoration: none;
+  padding: 12px 122px;
+  width: 300px;
+  height: 50px;
+  background-color:black;
+  color: white;
+  margin-left: 36%;
+  border-radius: 10px;
+  font-weight: 900;
+  border: 2px solid #9dffad;
+  font-size: 16px;
+
+}
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -193,14 +208,17 @@ button {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 701px) {
   /* For mobile phones: */
   .card {
+    flex-direction: row;
     width: 20%;
     height: 100%;
     display: grid;
-    grid-template-columns: (1, 1fr);
+    grid-template-columns: (3, 1fr);
     grid-row-gap: 20px;
+    margin: 50px ;
+
     
   
   }
