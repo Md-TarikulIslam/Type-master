@@ -190,6 +190,7 @@ button {
   background-color:black;
   color: white;
   margin-left: 36%;
+  /* margin: auto; */
   border-radius: 10px;
   font-weight: 900;
   border: 2px solid #9dffad;
@@ -208,8 +209,8 @@ button {
 }
 
 
-@media only screen and (min-width: 701px) {
-  /* For mobile phones: */
+@media only screen and (min-width: 701px)  {
+  /* For big display: */
   .card {
     flex-direction: row;
     width: 20%;

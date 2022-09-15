@@ -46,6 +46,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -95,6 +96,7 @@ const gameOver = () => {
   display.classList.add("inactive");
 };
 
+
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
@@ -116,7 +118,7 @@ const start = () => {
       countdownOverlay.innerHTML = "";
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
