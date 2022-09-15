@@ -20,33 +20,129 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      Accordion Item #1
+                      Difference between Local Storage and Session Storage?
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    <div class="accordion-body"><span class="fw-bold">Local Storage:</span>  This read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).
+
+                        DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character. Strings are automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g., http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g., https://abc.com).
+                        
+                        If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of being loaded from the server) the requirements for behavior are undefined and may vary among different browsers. Each file appears to be returned a different object by localStorage in all current browsers: URL. Essentially, it seems to be a case of each URL: file having its own unique local storage area.
+                        
+                        This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain unclear. As such, there’s a possibility that browsers may change how they handle files at any time. The way some browsers handle it has evolved.
+                        
+                        Local storage has 4 methods:
+                        
+                        setItem() Method – This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.
+                        localStorage.setItem(key, value)
+                        getItem() Method – This method takes one parameter that is key which is used to get the value stored with a particular key name.
+                        localStorage.getItem(key)
+                        removeItem() Method – This is method is used to remove the value stored in the memory in reference to key.
+                        localStorage.removeItem(key)
+                        clear() Method – This method is used to clear all the values stored in localstorage.
+                        localStorage.clear()
+                    
+                    <br><br>
+                <span class="fw-bold">Session Storage:</span>
+                     Objects can be accessed using the sessionStorage read-only property. The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.
+
+                    A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid for only one tab at a time. Pages are only saved for the amount of time that the tab or the browser is open; they do not persist after the page reloads and restores. A new session is created each time a tab or window is opened; this is different from session cookies. Each tab/window that is opened with the same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage from the original tab is copied to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage objects.
+
+                    A page’s protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts accessed through HTTP (for example, http://abc.com) is stored in a separate object from the same site accessed through HTTPS (for instance, https://abc.com). A DOMString number is two bytes per character in UTF-16 DOMString format. Strings are automatically generated from integer keys just as they are for objects.
+
+                    Session Storage has 4 methods:
+
+                    setItem() Method – This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.
+                    sessionStorage.setItem(key, value)
+                    getIteam() Method – This method takes one parameter that is key which is used to get the value stored with a particular key name.
+                    sessionStorage.getItem(key)
+                    removeItem() Method – This is method is used to remove the value stored in the memory in reference to key.
+                    sessionStorage.removeItem(key)
+                    clear() Method – This method is used to clear all the values stored in the session storage
+                    sessionStorage.clear()
+                </div>
                   </div>
                 </div>
+
+
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                  </div>
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Difference between Global Scope and Block Scope
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body"><span class="fw-bold">Global Scope:</span> 
+                        Variables declared Globally (outside any function) have Global Scope.
+                        
+                        Global variables can be accessed from anywhere in a JavaScript program.
+                        
+                        Variables declared with var, let and const are quite similar when declared outside a block.
+                    <br><br>
+                    <span class="fw-bold">Block Scope:</span>
+                    
+Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const. Variables declared with the var keyword can NOT have block scope
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
                   </div>
-                </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        How event loop works?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body"><span class="fw-bold">Event Loop : </span> The event loop is the secret behind JavaScript's asynchronous 
+                        programming. JS executes all operations on a single thread, but using a 
+                        few smart data structures, it gives us the illusion of multi-threading.
+                        
+                        Easy Definition : 
+                        The Event Loop has one simple job — to monitor the Call Stack and the 
+                        Callback Queue or Message Queue. 
+                        
+                        If the Call Stack is empty, it will take the first event from the
+                        Callback queue and will push it to the Call Stack, which effectively runs it. 
+                        
+                        Such an iteration is called a tick in the Event Loop. 
+                        Each event is just a function callback.
+                        
+                        Easiest explanation : 
+                        When any Asynchronous event occur such as setTimeOut or promises... 
+                        Then these task takes some time to complete I/O if they have any. 
+                        If they completed their I/O or don't have any, then they simply put into 
+                        message queue or callback queue. Then event loop will firstly execute the 
+                        call stack tasks and then look for callback or message queue and then execute it..
+                        
+                        For more info visit : https://nodejs.dev/learn/the-nodejs-event-loop
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        What are the ways to find undefined?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">  8 ways to get undefined : <br><br><br>
+ 
+                        1. Variable that is not initialized will give undefined. <br>
+                        2. Function with no return. <br>
+                        3. Parameter that is without pass will be undefined. <br>
+                        4. If return has nothing on the right side will return undefined. <br>
+                        5. Propery that doesn't exists on an object will give you undefined. <br>
+                        6. Accessing array elements outside of the index range. <br>
+                        7. Deleting an element inside an array. <br>
+                        8. Set a value directly on undefined</div>
+                    </div>
+                  </div>
+              
+                
               </div>
         </section>
     </main>
